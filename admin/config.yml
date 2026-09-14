@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main # ou master, dependendo do nome do teu ramo principal no GitHub
+
+media_folder: "static/images/uploads" # Ajusta para a pasta onde guardas as imagens do teu site
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Artigos"
+    folder: "content/posts" # Ajusta para a pasta onde ficam os teus posts (depende do gerador que usas, ex: Hugo, Jekyll)
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Corpo", name: "body", widget: "markdown"}
